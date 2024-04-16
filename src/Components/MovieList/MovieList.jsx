@@ -5,7 +5,7 @@ import calender from '../../Images/calender.png'
 // Accessing the API key
 const ApiKey = import.meta.env.VITE_API_KEY;
 
-const MovieList = ({ movie, setMovie, search, movieWatched, setMovieWatched, movieObj, setMovieObj, moviedetails, setMovieDetails }) => {
+const MovieList = ({ movie, setMovie, search, movieWatched, setMovieWatched, movieObj, setMovieObj, moviedetails, setMovieDetails,starRating, setStarRating }) => {
 
   const detailsMovie = async (id) => {
     console.log(id)
@@ -17,6 +17,7 @@ const MovieList = ({ movie, setMovie, search, movieWatched, setMovieWatched, mov
       setMovieObj(() => movieobject)
       setMovieWatched(false)
       setMovieDetails(true)
+      setStarRating(0)
     } catch (error) {
       console.log(error)
     }

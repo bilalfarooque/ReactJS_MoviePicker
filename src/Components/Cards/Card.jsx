@@ -4,7 +4,7 @@ import MovieList from '../MovieList/MovieList'
 import MovieWatched from '../MovieWatched/MovieWatched'
 
 
-const Card = ({ movie, setMovie, search, movieWatched, setMovieWatched, movieObj, setMovieObj,moviedetails,setMovieDetails,watchingList,setWatchingList }) => {
+const Card = ({ movie, setMovie, search, movieWatched, setMovieWatched, movieObj, setMovieObj,moviedetails,setMovieDetails,watchingList,setWatchingList,starRating, setStarRating }) => {
   return (
     <div className='moviedetails'>
       <MovieList
@@ -17,6 +17,8 @@ const Card = ({ movie, setMovie, search, movieWatched, setMovieWatched, movieObj
         setMovieObj={setMovieObj}
         moviedetails={moviedetails}
         setMovieDetails={setMovieDetails}
+        starRating ={starRating}
+        setStarRating ={setStarRating}
       />
       <MovieWatched
         movieWatched={movieWatched}
@@ -25,7 +27,9 @@ const Card = ({ movie, setMovie, search, movieWatched, setMovieWatched, movieObj
         setMovieDetails={setMovieDetails}
         watchingList={watchingList}
         setWatchingList={setWatchingList}
-        movieObj={movieObj} />
+        movieObj={movieObj}
+        starRating ={starRating}
+        setStarRating ={setStarRating} />
     </div>
   )
 }

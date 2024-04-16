@@ -14,6 +14,7 @@ function App() {
   const [moviedetails, setMovieDetails] =useState(false)
   const [watchingList, setWatchingList] = useState([])
   const [movieObj , setMovieObj] = useState({})
+  const [starRating, setStarRating] = useState(null);
 
 
   useEffect(()=>{
@@ -54,6 +55,9 @@ function App() {
         setMovieObj={setMovieObj}
         watchingList={watchingList}
         setWatchingList={setWatchingList}
+        starRating ={starRating}
+        setStarRating ={setStarRating}
+
       />
 
     </div>
