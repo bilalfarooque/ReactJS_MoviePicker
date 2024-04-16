@@ -1,0 +1,20 @@
+ {[...Array(10)].map((star, index) => {
+              const currentRating = index + 1
+              return (
+                <label>
+                  <input type="radio" name='rating' value={currentRating} onClick={() => setStarRating(currentRating)} />
+                  <FaStar id='star'
+                    color={currentRating <= starRating ? "ffc107" : "grey"} />
+                </label>
+              )
+            })
+            }
+
+Dynamic Array Creation: [...Array(10)] creates an array of 10 elements. This is used to generate 10 stars for the rating system. The spread operator (...) is used to convert the array into an iterable object that can be mapped over.
+
+Mapping Over the Array: .map((star, index) => {...}) iterates over each element in the array. For each iteration, it generates a star component. The index parameter is used to determine the value of each star (1 to 10).
+
+Star Component: Inside the map function, a <label> element is returned for each star. This label contains:
+An <input> element of type radio that represents the star. The name attribute is set to 'rating', ensuring that selecting one radio button deselects the others. The value attribute is set to currentRating, which is the index plus one (to start from 1 instead of 0). The onClick event handler updates the star rating by calling setStarRating(currentRating).
+
+A <FaStar> component (presumably from the react-icons/fa library) that visually represents the star. The color prop is conditionally set to "ffc107" (a shade of yellow) if the current star's value is less than or equal to the current rating, indicating that the star is filled. Otherwise, it's set to "grey", indicating that the star is not filled.
