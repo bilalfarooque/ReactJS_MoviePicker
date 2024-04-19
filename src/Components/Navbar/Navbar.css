@@ -25,7 +25,22 @@
 }
 .search{
     width: 45%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    
 }
+
+.search-btn{
+    width: 90px;
+    outline: none;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    border-radius: 8px;
+    color: white;
+    background-color: #6e45f1 ;
+}
+
 .search input{
     height: 35px;
     background-color: #6e45f1;

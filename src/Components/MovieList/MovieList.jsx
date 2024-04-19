@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import '../MovieList/MovieList.css'
 import calender from '../../Images/calender.png'
+import {MovieContext} from '../../Context/context';
 
 // Accessing the API key
 const ApiKey = import.meta.env.VITE_API_KEY;
 
-const MovieList = ({ movie, setMovie, search, movieWatched, setMovieWatched, movieObj, setMovieObj, moviedetails, setMovieDetails,starRating, setStarRating }) => {
-
+const MovieList = () => {
+  
+  const {setMovieObj,setMovieWatched,setMovieDetails,setStarRating,movie, search} = useContext(MovieContext)
+  
   const detailsMovie = async (id) => {
     console.log(id)
     try {

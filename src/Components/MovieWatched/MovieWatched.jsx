@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./MovieWatched.css";
 import hash from "../../Images/hash.png";
 import star from "../../Images/star.png";
@@ -6,17 +6,20 @@ import Timer from "../../Images/Timer.png";
 import { FaStar } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { FaLongArrowAltLeft } from "react-icons/fa";
+import {MovieContext} from "../../Context/context";
 
-const MovieWatched = ({
-  movieWatched,
-  setMovieWatched,
-  movieObj,
-  moviedetails,
-  setMovieDetails,
-  watchingList,
-  setWatchingList,
-  starRating, setStarRating
-}) => {
+
+const MovieWatched = () => {
+  const {  movieWatched,
+    setMovieWatched,
+    movieObj,
+    moviedetails,
+    setMovieDetails,
+    watchingList,
+    setWatchingList,
+    starRating, setStarRating} = useContext(MovieContext);
+
+
   const [watchRating, setWatchRating] = useState(null);
   const [watchTiming, setWatchTiming] = useState(0);
   const [yourated, setYouRated] = useState(null);
